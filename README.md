@@ -21,8 +21,7 @@ This project uses the Gradle build system. To build this project, use the `gradl
 
 Screenshots
 ---------------
-![SplashScreen]()
-![Main Activity Screenshot](screens/MainActivity.png)
+<img src="screens/MainActivity.png" height=550px alt="Main Activity" />
 
 Libraries Used
 ---------------
