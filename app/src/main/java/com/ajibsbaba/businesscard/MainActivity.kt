@@ -27,6 +27,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ajibsbaba.businesscard.ui.theme.Blue100
 import com.ajibsbaba.businesscard.ui.theme.BusinessCardTheme
+import com.ajibsbaba.businesscard.ui.theme.Purple800
+import com.ajibsbaba.businesscard.ui.theme.Yellow200
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,9 +80,7 @@ fun PortfolioButton(ButtonText: String? = "Contact Me") {
         .height(45.dp), colors = ButtonDefaults.buttonColors(
         backgroundColor = Blue100, contentColor = Color.White
         ),  shape = RoundedCornerShape(10.dp), onClick = { Log.d(TAG, "Create Projects Card")}) {
-        if (ButtonText != null) {
-            Text(text = ButtonText, fontWeight = FontWeight.SemiBold)
-        }
+    Text(text = "$ButtonText", fontWeight = FontWeight.SemiBold)
     }
 }
 
@@ -88,8 +88,16 @@ fun PortfolioButton(ButtonText: String? = "Contact Me") {
 
 @Preview()
 @Composable
-fun ProjectCard() {
-
+fun ProjectCard(projectName: String? = "Acefood",
+                projectDetails: String? = "An app that detects diseases in tomato plants") {
+    Card(modifier = Modifier
+        .fillMaxWidth()
+        .height(140.dp), shape = RoundedCornerShape(corner = CornerSize(28.dp)), backgroundColor = Purple800) {
+        Column(modifier = Modifier.padding(28.dp)) {
+            Text(text = "$projectName", fontWeight = FontWeight.ExtraBold, fontSize = 24.sp, color = Color.Black)
+            Text(text = "$projectDetails", fontWeight = FontWeight.Normal, color = Color.DarkGray)
+        }
+    }
 }
 
 
@@ -103,6 +111,7 @@ fun DefaultPreview() {
             ProfileImage()
             BusinessCard()
             PortfolioButton()
+            ProjectCard()
         }
     }
 }
