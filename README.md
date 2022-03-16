@@ -3,6 +3,10 @@ Business Card
 
 A Portfolio app illustrating Android development practices with Jetpack Compose
 
+Build Status
+=================
+[![Android CI](https://github.com/AjibsBaba/BusinessCard/actions/workflows/android.yml/badge.svg)](https://github.com/AjibsBaba/BusinessCard/actions/workflows/android.yml)
+
 Introduction
 =================
 
@@ -13,7 +17,7 @@ Getting Started
 ---------------
 This project uses the Gradle build system. To build this project, use the `gradlew build` command or use "Import Project" in Android Studio.
 
-[![Android CI](https://github.com/AjibsBaba/BusinessCard/actions/workflows/android.yml/badge.svg)](https://github.com/AjibsBaba/BusinessCard/actions/workflows/android.yml)
+
 
 Screenshots
 ---------------
@@ -22,6 +26,6 @@ Screenshots
 
 Libraries Used
 ---------------
-[Android KTX][]
-[Jetpack Compose][]
-[Compose Material][]
+* Android KTX
+* Jetpack Compose
+* Compose Material
